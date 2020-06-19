@@ -403,7 +403,7 @@ function update(mode) {
   switch (mode) {
     case 0:
       // when updating txt file
-      $("#txt").val(stringify(gridValues));
+      $("#txt").val(`[${$("#mapname").val()}]\n${stringify(gridValues)}`);
       break;
     case 1:
       // when updating entire gui
