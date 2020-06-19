@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>TOP Map File Generator</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="TMPGeneratorMain.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="TMPGeneratorStyle.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="https://CrackThrough.github.io">
+      <div class="topcat">
+        <h1 class="topcat" style="color: white;">TOP Map File Generator</h1>
+      </div></a
+    >
+    <br class="thiccbr" />
+    <h3 style="margin: 10px;">Map Name:</h3>
+    <input
+      type="text"
+      style="margin: 10px; margin-top: -10; width: 540px;"
+      placeholder="Allowed Characters: 0 to 9, a to z. Maximum 128 characters."
+      id="mapname"
+    />
+
+    <div class="gridBg">
+      <div class="gridWrapper"></div>
+    </div>
+    <div class="tools">
+      <h3 style="padding: 3; color: rgb(223, 223, 223);">Select paint below</h3>
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block3.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockR" />
+      <p class="tools">RED</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block4.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockO" />
+      <p class="tools">ORANGE</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block5.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockY" />
+      <p class="tools">YELLOW</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block6.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockG" />
+      <p class="tools">GREEN</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block7.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockB" />
+      <p class="tools">AQUA</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block8.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockK" />
+      <p class="tools">BLUE</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block9.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockP" />
+      <p class="tools">PURPLE</p>
+
+      <div
+        class="imgPreset"
+        style="background-image: url('./TMPGenerator_src/block2.png');"
+      ></div>
+      <input type="radio" class="m" name="blocks" id="blockA" />
+      <p class="tools">GRAY</p>
+
+      <div class="imgPreset" style="background-color: black;"></div>
+      <input
+        type="radio"
+        class="m"
+        name="blocks"
+        id="blockN"
+        checked="checked"
+      />
+      <p class="tools">EMPTY</p>
+    </div>
+    <br />
+    <div>
+      <input type="button" value="RESET" class="mylilbtn" onclick="r(0)" />
+      <input type="button" value="FILL" class="mylilbtn" onclick="r(1)" />
+      <input
+        type="button"
+        value="CHANGE BRUSH"
+        class="mybtn"
+        onclick="toggleToolstyle()"
+      />
+      <p id="bStyle">Current brush style: loading..</p>
+    </div>
+    <div class="texteditor">
+      <textarea
+        id="txt"
+        placeholder="Tetris field converted to string comes here.."
+        readonly
+      ></textarea>
+    </div>
+
+    <div class="line"></div>
+  </body>
+</html>
