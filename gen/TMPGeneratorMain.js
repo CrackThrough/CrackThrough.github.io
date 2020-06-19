@@ -52,6 +52,7 @@ $(document).ready(function () {
         .replace(/[^0-9a-z]/gi, "")
         .substr(0, 128);
       $("input:text[id='mapname']").val(c);
+      update(0);
     }
   );
 
@@ -403,7 +404,11 @@ function update(mode) {
   switch (mode) {
     case 0:
       // when updating txt file
-      $("#txt").val(`[${$("#mapname").val()}]\n${stringify(gridValues)}`);
+      $("#txt").val(
+        `${
+          $("#mapname").val() != "" ? `[${$("#mapname").val()}]\n` : ""
+        }${stringify(gridValues)}`
+      );
       break;
     case 1:
       // when updating entire gui
