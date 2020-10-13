@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
