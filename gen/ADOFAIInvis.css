@@ -1,0 +1,54 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", "Nanum Gothic", sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#fakefiledrop {
+  width: 60vw;
+  height: 20vh;
+  text-align: center;
+  border: #1f1f1f dashed 7px;
+  margin-left: 20vw;
+  border-radius: 28px;
+  margin-top: 17vh;
+  overflow: hidden;
+  position: absolute;
+  user-select: none;
+}
+
+#fakefiledrop > * {
+  margin-top: calc(10vh - 14px);
+}
+
+#filedrop {
+  position: absolute;
+  width: 60vw;
+  height: 20vh;
+  margin-left: 20vw;
+  margin-top: 17vh;
+  border: rgba(0, 0, 0, 0) dashed 7px;
+  z-index: 1;
+
+  border-width: 7px;
+  border-radius: 28px;
+}
+
+#filedrop:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#filedrop:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#txt {
+  margin-top: 60vh;
+}
